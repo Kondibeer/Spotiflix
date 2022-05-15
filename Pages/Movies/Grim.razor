@@ -1,0 +1,48 @@
+﻿@page "/grim"
+
+
+<h2>Grim</h2>
+
+
+<body>
+    <dl>
+        <dt>The moive you searched for:</dt>
+        <dd>-@GetMovieTitle()</dd>
+        <dt>Genre of the movie:</dt>
+        <dd>-@GetGenre()</dd>
+        <dt>Lenght of the movie is:</dt>
+        <dd>-@Lenght mins</dd>
+        <dt>Year the movie came out:</dt>
+        <dd>-@GetDayOfRelease()</dd>
+        <dt>Here is a link for where you can see the movie:</dt>
+        <dd><a href="https://www.netflix.com/dk/title/80079256?tctx=9%2C3%2C501fd6f6-0b21-48df-80de-47c07cbf4469-139310114%2Cd6efd1e3-a420-4a05-b36e-82f2088c174e_52049014X10XX1652625197700%2Cd6efd1e3-a420-4a05-b36e-82f2088c174e_ROOT%2C%2C%2C&trackId=14170056">Link to where you can see the movie</a></dd>
+    </dl>
+</body>
+
+
+
+
+
+@code {
+    private string MovieTitle = "The Brothers Grimsby";
+    private string Genre = "Spy-movie, Action, British and Adventure";
+    private int Lenght = 83;
+    private string dayOfRelease = "24/2/2016";
+
+    private string GetMovieTitle()
+    {
+        return MovieTitle;
+    }
+    private int GetLength()
+    {
+        return Lenght;
+    }
+    private string GetGenre()
+    {
+        return Genre;
+    }
+    private string GetDayOfRelease()
+    {
+        return dayOfRelease;
+    }
+}

@@ -1,0 +1,71 @@
+﻿@page "/mr"
+
+
+<h3>Mr</h3>
+<body>
+    <dl>
+        <dt>The Serie you searched for:</dt>
+        <dd>-@GetSerieTitle()</dd>
+        <dt>How many seasons:</dt>
+        <dd>@GetSeason()</dd>
+        <dt>Name of the episode:</dt>
+        <dd>-@GetEpisodeTitle()</dd>
+        <dt>The episodes number</dt>
+        <dd>-@GetEpisode()</dd>
+        <dt>Genre of the serie:</dt>
+        <dd>-@GetGenre()</dd>
+        <dt>Lenght of the serie:</dt>
+        <dd>-@Lenght mins</dd>
+        <dt>Year the serie came out:</dt>
+        <dd>-@GetDayOfRelease()</dd>
+        <dt>Here is a link for where you can see the serie:</dt>
+        <dd><a href ="https://www.netflix.com/watch/80208876?trackId=251121837">Click me</a></dd>
+    </dl>
+</body>
+
+
+   
+
+
+
+
+@code {
+    private string SerieTitle = "MR.IGLESIAS";
+    private int Episode = 1;
+    private string EpisodeTitle = "Some Children Left Behind";
+    private int Season = 3;
+    private string Genre = "Sitcoms, teenserie and a comedyserie";
+    private int Lenght = 599;
+    private string dayOfRelease = "21/6/2019";
+
+    private string GetSerieTitle()
+    {
+        return SerieTitle;
+    }
+    private int GetSeason()
+    {
+        return Season;
+    }
+    private string GetEpisodeTitle()
+    {
+        return EpisodeTitle;
+    }
+    private int GetEpisode()
+    {
+        return Episode;
+    }
+    private int GetLenght()
+    {
+        return Lenght;
+    }
+    private string GetGenre()
+    {
+        return Genre;
+    }
+    private string GetDayOfRelease()
+    {
+        return dayOfRelease;
+    }
+
+
+}

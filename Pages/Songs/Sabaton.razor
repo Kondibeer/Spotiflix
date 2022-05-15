@@ -1,0 +1,72 @@
+﻿@page "/sab"
+
+
+
+<h3>Sabaton</h3>
+
+
+
+
+
+<body>
+    <dl>
+        <dt>The song you searched for:</dt>
+        <dd>-@GetSongTitle()</dd>
+        <dt>Name of the Artist that made this song:</dt>
+        <dd>-@GetArtistName() </dd>
+        <dt>The album with the song in it</dt>
+        <dd>-@GetAlbumName()</dd>
+        <dt>Genre of the song:</dt>
+        <dd>-@GetGenre()</dd>
+        <dt>Lenght of the song is:</dt>
+        <dd>-@Lenght seconds</dd>
+        <dt>Year the song came out:</dt>
+        <dd>-@GetDayOfRelease()</dd>
+        <dt>Here is a link for where you can hear the music:</dt>
+        <dd><a href="https://open.spotify.com/album/5TdhTTvwtD0ekZBYve97r7?highlight=spotify:track:1BrgjqSg9du0lj3TUMLluL">Link to where you can hear the music</a></dd>
+    </dl>
+</body>
+
+
+
+
+
+
+
+
+@code {
+    private string Genre = "Rock";
+
+    private string SongTitle = "To Hell and Back";
+
+    private string Artist = "Sabaton";
+
+    private string AlbumTitle = "Heroes";
+
+    private int Lenght = 327;
+
+    private string Released = "16/5/2014";
+
+
+    private string GetSongTitle()
+    {
+        return SongTitle;
+    }
+
+    private string GetArtistName()
+    {
+        return Artist;
+    }
+    private string GetAlbumName()
+    {
+        return AlbumTitle;
+    }
+    private string GetGenre()
+    {
+        return Genre;
+    }
+    private string GetDayOfRelease()
+    {
+        return Released;
+    }
+}

@@ -1,0 +1,69 @@
+﻿@page "/boom"
+
+
+<h2>Boomx4</h2>
+
+<body>
+    <dl>
+        <dt>The song you searched for:</dt>
+        <dd>-@GetSongTitle()</dd>
+        <dt>Name of the Artist that made this song:</dt>
+        <dd>-@GetArtistName() </dd>
+        <dt>The album with the song in it</dt>
+        <dd>-@GetAlbumName()</dd>
+        <dt>Genre of the song:</dt>
+        <dd>-@GetGenre()</dd>
+        <dt>Lenght of the song is:</dt>
+        <dd>-@Lenght seconds</dd>
+        <dt>Year the song came out:</dt>
+        <dd>-@GetDayOfRelease()</dd>
+        <dt>Here is a link for where you can hear the music:</dt>
+        <dd><a href ="https://open.spotify.com/album/44BtGGBJohrvoKVzmi1wij?highlight=spotify:track:2Ld2LehpgQNREMxl9LlIzm">Link to where you can hear the music</a></dd>
+    </dl>
+    
+
+</body>
+
+
+
+@code {
+
+    private string Genre = "Eurodance and Pop";
+
+    private string SongTitle = "Boom, Boom, Boom, Boom";
+
+    private string Artist = "Vengaboys";
+
+    private string AlbumTitle = "The Party Album";
+
+    private int Lenght = 322;
+
+    private string Released = "4/6/1999";
+
+
+    private string GetSongTitle()
+    {
+        return SongTitle;
+    }
+
+    private string GetArtistName()
+    {
+        return Artist;
+    }
+    private string GetAlbumName()
+    {
+        return AlbumTitle;
+    }
+    private string GetGenre()
+    {
+        return Genre;
+    }
+    private string GetDayOfRelease()
+    {
+        return Released;
+    }
+
+    
+
+
+}

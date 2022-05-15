@@ -1,0 +1,43 @@
+﻿@page "/jackass"
+
+<h2>Jackass</h2>
+
+
+<body>
+    <dl>
+        <dt>The moive you searched for:</dt>
+        <dd>-@GetMovieTitle()</dd>
+        <dt>Genre of the movie:</dt>
+        <dd>-@GetGenre()</dd>
+        <dt>Lenght of the movie is:</dt>
+        <dd>-@Lenght mins</dd>
+        <dt>Year the movie came out:</dt>
+        <dd>-@GetDayOfRelease()</dd>
+        <dt>Here is a link for where you can see the movie:</dt>
+        <dd><a href="https://www.netflix.com/dk/title/60023617?tctx=1%2C5%2C15c3af42-f460-4ad6-b6bd-9ca8eab67d88-53693545%2Cf4c9630f-44ff-4551-8f37-c390ce0a3034_15763179X6XX1652480701254%2Cf4c9630f-44ff-4551-8f37-c390ce0a3034_ROOT%2C%2C%2C&trackId=14170045">Link to where you can see the movie</a></dd>
+    </dl>
+</body>
+
+@code {
+    private string MovieTitle = "Jackass the movie";
+    private string Genre = "Comedy";
+    private int Lenght = 85;
+    private string dayOfRelease = "25/10/2002";
+
+    private string GetMovieTitle()
+    {
+        return MovieTitle;
+    }
+    private int GetLength()
+    {
+        return Lenght;
+    }
+    private string GetGenre()
+    {
+        return Genre;
+    }
+    private string GetDayOfRelease()
+    {
+        return dayOfRelease;
+    }
+}

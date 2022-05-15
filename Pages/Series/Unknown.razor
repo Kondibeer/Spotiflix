@@ -1,0 +1,67 @@
+﻿@page "/Unknown"
+
+<h3>Unknown</h3>
+
+
+<body>
+    <dl>
+        <dt>The Serie you searched for:</dt>
+        <dd>-@GetSerieTitle()</dd>
+        <dt>How many seasons:</dt>
+        <dd>@GetSeason()</dd>
+        <dt>Name of the episode:</dt>
+        <dd>-@GetEpisodeTitle()</dd>
+        <dt>The episodes number</dt>
+        <dd>-@GetEpisode()</dd>
+        <dt>Genre of the serie:</dt>
+        <dd>-@GetGenre()</dd>
+        <dt>Lenght of the serie:</dt>
+        <dd>-@Lenght mins</dd>
+        <dt>Year the serie came out:</dt>
+        <dd>-@GetDayOfRelease()</dd>
+        <dt>Here is a link for where you can see the serie:</dt>
+        <dd><a href ="https://www.netflix.com/watch/81286608?trackId=251143964">Click me</a></dd>
+    </dl>
+</body>
+
+
+
+
+@code {
+    private string SerieTitle = "The Unknown Soldier";
+    private int Episode = 1;
+    private string EpisodeTitle = "Episode 1";
+    private int Season = 1;
+    private string Genre = "Finish, Based on books, Nordic series";
+    private int Lenght = 280;
+    private string dayOfRelease = "30/12/2018";
+
+    private string GetSerieTitle()
+    {
+        return SerieTitle;
+    }
+    private int GetSeason()
+    {
+        return Season;
+    }
+    private string GetEpisodeTitle()
+    {
+        return EpisodeTitle;
+    }
+    private int GetEpisode()
+    {
+        return Episode;
+    }
+    private int GetLenght()
+    {
+        return Lenght;
+    }
+    private string GetGenre()
+    {
+        return Genre;
+    }
+    private string GetDayOfRelease()
+    {
+        return dayOfRelease;
+    }
+}
